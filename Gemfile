@@ -28,8 +28,10 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-github'
 gem 'cancan'
-gem 'github'
+
 gem 'google-api-client'
+gem 'haml-rails'
+gem 'bunny'
 
 
 
