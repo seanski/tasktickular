@@ -24,6 +24,13 @@ gem 'jquery-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'tickspot-rb', require: 'tickspot'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-github'
+gem 'cancan'
+gem 'github'
+gem 'google-api-client'
+
 
 
 # To use ActiveModel has_secure_password
