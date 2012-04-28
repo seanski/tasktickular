@@ -6,6 +6,10 @@ class Authorization < ActiveRecord::Base
   scope :credentials, ->(provider, uid) { where(provider: provider, uid: uid) }
   scope :with_user, includes(:user)
 
+  def registration_dump
+    self.as_json(include: :user)
+  end
+
   class << self
     def find_or_create_from_auth_hash(auth_hash, user)
       auth = Authorization.credentials(auth_hash['provider'], auth_hash['uid']).with_user.first
