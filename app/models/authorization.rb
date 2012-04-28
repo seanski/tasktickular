@@ -2,6 +2,10 @@ class Authorization < ActiveRecord::Base
   attr_accessible :email, :first_name, :image, :last_name, :location, :name, :nickname, :provider, :secret, :token, :uid, :user_id
 
   belongs_to :user
+
+  scope :credentials, ->(provider, uid) { where(provider: provider, uid: uid) }
+  scope :with_user, includes(:user)
+
   class << self
     def find_or_create_from_auth_hash(auth_hash, user)
       auth = Authorization.credentials(auth_hash['provider'], auth_hash['uid']).with_user.first
