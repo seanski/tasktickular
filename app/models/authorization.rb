@@ -34,7 +34,7 @@ class Authorization < ActiveRecord::Base
                                         location: info['location'],
                                         provider: auth_hash['provider'],
                                         token: credentials['token'],
-                                        uid: auth_hash['uid']
+                                        uid: auth_hash['uid'].to_s
                                         )
     end
   end
