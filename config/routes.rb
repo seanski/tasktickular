@@ -1,5 +1,7 @@
 Tasktickular::Application.routes.draw do
 
+  resources :activities
+
   get "home/index"
 
   resources :users, except: [:new, :create]

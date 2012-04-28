@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  summary: MyString
+  origin: MyString
+  did_at: 2012-04-27 19:17:31
+  time_spent_in_minutes: 1
+  user: 
+
+two:
+  summary: MyString
+  origin: MyString
+  did_at: 2012-04-27 19:17:31
+  time_spent_in_minutes: 1
+  user: 
