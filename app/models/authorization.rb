@@ -2,9 +2,9 @@ class Authorization < ActiveRecord::Base
   attr_accessible :email, :first_name, :image, :last_name, :location, :name, :nickname, :provider, :secret, :token, :uid, :user_id
 
   belongs_to :user
-
-  scope :credentials, ->(provider, uid) { where(provider: provider, uid: uid) }
   scope :with_user, includes(:user)
+  scope :provider, ->(provider) { where(provider: provider) }
+  scope :credentials, ->(provider, uid) { provider(provider).where(uid: uid.to_s) }
 
   def registration_dump
     self.as_json(include: :user)
