@@ -32,6 +32,8 @@ gem 'cancan'
 gem 'google-api-client'
 gem 'haml-rails'
 gem 'bunny'
+gem 'octokit'
+gem 'amqp'
 
 
 
