@@ -2,7 +2,7 @@ Tasktickular::Application.routes.draw do
 
   get "home/index"
 
-  resources :users
+  resources :users, except: [:new, :create]
 
   match '/auth/:provider/callback', to: 'sessions#create'
 
